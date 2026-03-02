@@ -105,8 +105,6 @@
     <arg name="warning-severity" value="8"/>
     <rule ref="PSR1"/>
     <rule ref="PSR12"/>
-    <rule ref="WebimpressCodingStandard.Formatting.Heredoc"/>
-    <rule ref="WebimpressCodingStandard.Commenting.TagCase"/>
     <rule ref="SlevomatCodingStandard.Commenting.ForbiddenComments">
         <properties>
             <property name="forbiddenCommentPatterns" type="array">
@@ -137,14 +135,6 @@
                 <element value="@expectedExceptionMessageRegExp"/>
             </property>
         </properties>
-    </rule>
-    <!-- DocBlocks and comments SHOULD NOT be used for already typehinted arguments,
-         except arrays. -->
-    <rule ref="WebimpressCodingStandard.Commenting.TagWithType">
-        <exclude name="WebimpressCodingStandard.Commenting.TagWithType.InvalidOrder"/>
-        <exclude name="WebimpressCodingStandard.Commenting.TagWithType.InvalidTypeFormat"/>
-        <exclude name="WebimpressCodingStandard.Commenting.TagWithType.InvalidParamName"/>
-        <exclude name="WebimpressCodingStandard.Commenting.TagWithType.VariableName"/>
     </rule>
     <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
         <properties>
@@ -209,20 +199,11 @@
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.Variables.UselessVariable"/>
-    <rule ref="WebimpressCodingStandard.Classes.AlphabeticallySortedTraits"/>
     <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference"/>
-    <rule ref="WebimpressCodingStandard.Formatting.StringClassReference"/>
     <rule ref="Squiz.Classes.SelfMemberReference"/>
-    <rule ref="WebimpressCodingStandard.NamingConventions.Trait"/>
-    <rule ref="WebimpressCodingStandard.PHP.CorrectClassNameCase"/>
-    <rule ref="WebimpressCodingStandard.NamingConventions.Interface"/>
-    <rule ref="WebimpressCodingStandard.NamingConventions.Exception"/>
-    <rule ref="WebimpressCodingStandard.NamingConventions.AbstractClass"/>
     <rule ref="Generic.NamingConventions.ConstructorName"/>
     <rule ref="Squiz.Classes.ClassFileName"/>
     <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse"/>
-    <rule ref="WebimpressCodingStandard.Namespaces.ConstAndFunctionKeywords"/>
-    <rule ref="WebimpressCodingStandard.Namespaces.AlphabeticallySortedUses"/>
     <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
     <rule ref="Squiz.PHP.LowercasePHPFunctions"/>
     <rule ref="Generic.PHP.ForbiddenFunctions">
@@ -263,8 +244,6 @@
     </rule>
     <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
     <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInDeclaration"/>
-    <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInFunctionCall"/>
-    <rule ref="SlevomatCodingStandard.Functions.TrailingCommaInClosureUse"/>
     <rule ref="PEAR.Commenting.InlineComment"/>
     <rule ref="Squiz.Commenting.FunctionComment">
         <!-- Allow `@throws` without description -->

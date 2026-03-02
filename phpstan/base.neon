@@ -1,15 +1,14 @@
 includes:
-	- vendor/phpstan/phpstan-doctrine/extension.neon
-	- vendor/phpstan/phpstan-symfony/extension.neon
-	- vendor/phpstan/phpstan-webmozart-assert/extension.neon
-	- vendor/symplify/phpstan-rules/config/services/services.neon
-	- vendor/symplify/phpstan-extensions/config/config.neon
-	- vendor/spaze/phpstan-disallowed-calls/extension.neon
-#	- vendor/symplify/phpstan-rules/config/static-rules.neon
-#	- vendor/symplify/phpstan-rules/config/doctrine-rules.neon
-#	- vendor/symplify/phpstan-rules/config/code-complexity-rules.neon
-#	- vendor/symplify/phpstan-rules/config/naming-rules.neon
-#	- vendor/symplify/phpstan-rules/config/symfony-rules.neon
+    - ../../../../vendor/phpstan/phpstan-doctrine/extension.neon
+    - ../../../../vendor/phpstan/phpstan-symfony/extension.neon
+    - ../../../../vendor/symplify/phpstan-rules/config/services/services.neon
+    - ../../../../vendor/symplify/phpstan-extensions/config/config.neon
+    - ../../../../vendor/spaze/phpstan-disallowed-calls/extension.neon
+#    - vendor/symplify/phpstan-rules/config/static-rules.neon
+#    - vendor/symplify/phpstan-rules/config/doctrine-rules.neon
+#    - vendor/symplify/phpstan-rules/config/code-complexity-rules.neon
+#    - vendor/symplify/phpstan-rules/config/naming-rules.neon
+#    - vendor/symplify/phpstan-rules/config/symfony-rules.neon
 parameters:
     treatPhpDocTypesAsCertain: false
     featureToggles:
@@ -21,11 +20,8 @@ parameters:
     level: 6
     disallowedNamespaces:
         -
-          namespace: 'Gedmo\Translatable'
-          message: 'use knp translatable instead'
+            namespace: 'Gedmo\Translatable'
+            message: 'use knp translatable instead'
         -
-          namespace: 'Knp\DoctrineBehaviors\{Blameable,Loggable,Sluggable,SoftDeletable,Uuidable,Timestampable,Tree}\*'
-          message: 'use gedmo instead'
-    ignoreErrors:
-      - identifier: missingType.iterableValue
-      - identifier: missingType.generics
+            namespace: 'Knp\DoctrineBehaviors\{Blameable,Loggable,Sluggable,SoftDeletable,Uuidable,Timestampable,Tree}\*'
+            message: 'use gedmo instead'
